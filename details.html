@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فعاليات الجامعة الأفتراضية السورية - تفاصيل الفعالية</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Event Details CSS -->
+  <link rel="stylesheet" href="css/details.css" />
+</head>
+
+<body>
+  <header>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top px-4 py-3">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo1.jpg" alt="شعار" class="site-logo" />
+          فعاليات الجامعة الأفتراضية السورية
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> الصفحة الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.html"><i class="bi bi-calendar-event"></i> الفعاليات</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#"><i class="bi bi-info-circle"></i> تفاصيل الفعالية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"><i class="bi bi-book"></i> عن الدليل</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> تواصل معنا</a>
+            </li>
+          </ul>
+          <button class="dark-mode-toggle" id="darkModeToggle">
+            <i class="bi bi-moon"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Events Header -->
+    <section class="events-header">
+      <div class="events-header-container">
+        <div class="events-header-content">
+          <div class="events-header-icon">
+            <i class="bi bi-info-circle"></i>
+          </div>
+          <h1 class="events-header-title">تفاصيل الفعاليات</h1>
+          <p class="events-header-subtitle">
+            اختر الفعالية التي ترغب في معرفة المزيد عنها من القائمة أدناه
+          </p>
+        </div>
+      </div>
+      <div class="events-header-decoration">
+        <div class="decoration-circle"></div>
+        <div class="decoration-circle"></div>
+        <div class="decoration-circle"></div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <!-- Events List Section -->
+    <section class="events-list-section">
+      <div class="container">
+        <div class="events-list-container">
+          <div class="events-list-header">
+            <h2>قائمة الفعاليات</h2>
+            <p>اختر فعالية لعرض تفاصيلها الكاملة</p>
+          </div>
+          <div class="events-list" id="eventsList">
+            <!-- Event items will be generated here by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Detail Modal -->
+    <div class="modal fade" id="eventDetailModal" tabindex="-1" aria-labelledby="eventDetailModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="eventDetailModalLabel">
+              تفاصيل الفعالية
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="eventDetailContent">
+            <!-- Event details will be loaded here by JavaScript -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              إغلاق
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Events Section -->
+    <!-- Related Events Section - Static HTML fallback -->
+    <section class="related-events-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">فعاليات ذات صلة</h2>
+          <p class="section-subtitle">
+            اكتشف فعاليات أخرى قد تهمك بناءً على اهتماماتك
+          </p>
+        </div>
+        <div class="related-events-grid" id="relatedEventsGrid">
+          <!-- Fallback content in case JavaScript fails -->
+          <div class="text-center py-5">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">جارٍ التحميل...</span>
+            </div>
+            <p class="mt-3">جاري تحميل الفعاليات ذات الصلة...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- About Column -->
+        <div class="footer-col">
+          <h3>فعاليات الجامعة الأفتراضية السورية</h3>
+          <p>
+            منصة متخصصة في عرض الفعاليات الثقافية والترفيهية والتعليمية في الجامعة الافتراضية السورية
+
+
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Contact Column -->
+        <div class="footer-col">
+          <h3>معلومات التواصل</h3>
+          <div class="contact-info">
+            <p><i class="bi bi-geo-alt"></i> دمشق، سوريا</p>
+            <p><i class="bi bi-telephone"></i> +963 11 123 4567</p>
+            <p><i class="bi bi-envelope"></i> info@SVU-events.com</p>
+            <p><i class="bi bi-clock"></i> الأحد - الخميس: 9:00 - 17:00</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 فعاليات سوريا. جميع الحقوق محفوظة. تم التحديث في: أكتوبر
+          2024
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>
